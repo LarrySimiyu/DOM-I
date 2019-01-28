@@ -40,3 +40,34 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let ctaImage = document.getElementById("cta-img");
+ctaImage.src = 'img/header-img.png';
+
+let midPageImg = document.getElementById("middle-img");
+midPageImg.src = 'img/mid-page-accent.jpg';
+
+let header = document.querySelector("header");
+header.display = "flex";
+
+
+let navLinks = document.querySelectorAll('header nav a');
+
+
+const menuItems = ["Services", "Product", "Vision", "Feautures", "About", "Contact"];
+
+for(i = 0; i < menuItems.length; i++) {
+  navLinks[i].innerHTML =  menuItems[i]; // innerHTML content between the tags 
+  navLinks[i].style.color = "green";
+}
+
+const blog = document.createElement('a'); 
+blog.innerHTML = 'Blog';
+blog.style.color = 'green';
+
+const nav = document.querySelector('nav');
+nav.append(blog);
+
+
+
+const newChild = document.appendChild('a');
